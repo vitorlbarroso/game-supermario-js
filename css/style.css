@@ -34,11 +34,11 @@ body{
     left: 50px;
 }
 
-.jump{
+.jump {
     animation: mario-jump 600ms ease-out;
 }
 
-.clouds img{
+.clouds img {
     position: absolute;
     width: 600px;
     right: -600px;
@@ -55,7 +55,46 @@ body{
     animation: montains 30s infinite linear;
 }
 
-.press-start-game{
+.recordCoins {
+    position: absolute;
+    right: 70px;
+    top: 30px;
+    text-align: center;
+}
+
+.recordCoins img {
+    width: 30px;
+}
+
+.recordCoins p {
+    font-size: 15px;
+    font-family: 'Press Start 2P';
+    font-weight: bold;
+    margin-top: 5px;
+    color: #edb90d;
+}
+
+.quantitysCoins {
+    position: absolute;
+    right: 180px;
+    top: 30px;
+    text-align: center;
+}
+
+.quantitysCoins img {
+    width: 30px;
+}
+
+.quantitysCoins p {
+    font-size: 15px;
+    font-family: 'Press Start 2P';
+    font-weight: bold;
+    margin-top: 5px;
+    color: #edb90d;
+}
+
+/* Screens */
+.press-start-game {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -64,7 +103,7 @@ body{
     align-items: center;
 }
 
-.press-reaload-game-over{
+.press-reaload-game-over {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -73,6 +112,7 @@ body{
     align-items: center;
 }
 
+/* Pauses */
 .pause-initial-mario {
     animation: none;
     left: 15%;
