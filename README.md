@@ -10,6 +10,7 @@
 <p align="center">
     <a href="#installation">Como jogar</a> • 
     <a href="#author">Autor</a>
+    <a href="#references">Referências</a>
 </p>
 
 <hr>
@@ -33,7 +34,7 @@
     <p>▪️ https://www.youtube.com/watch?v=r9buAwVBDhA&ab_channel=ManualdoDev</p>
 </div>
 
-</div>
+<hr>
 
 <div id="author">
     <h1 align="center">
