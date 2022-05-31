@@ -181,3 +181,66 @@ body{
         width: 330px;
     }
 }
+
+/* Socials */
+
+.socials-background {
+    position: absolute;
+    width: 60px;
+    height: 50vh;
+    background-image: linear-gradient(black, rgb(20, 20, 20));
+    display: flex;
+    bottom: 25vh;
+    border-radius: 30px 10px;
+    left: -35px;
+    transition: 1s;
+}
+
+.socials-border {
+    position: absolute;
+    width: 2px;
+    height: 30vh;
+    background-image: linear-gradient(black, rgb(20, 20, 20));
+    right: -10px;
+    bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials-border p {
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 13px;
+    font-family: 'Press Start 2P';
+    writing-mode: vertical-lr;
+    letter-spacing: 2px;
+}
+
+.social-medias {
+    width: 10vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socials {
+    display: none;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.github a {
+    color: white;
+}
+
+.instagram a {
+    color: #DC2F68;
+}
+
+.linkedin a {
+    color: #2867B2;
+}
