@@ -1,5 +1,6 @@
 var isFirstRound = true;
 
+/* Selecionando os elementos */
 const mario = document.querySelector('.game-mario-running');
 const pipe = document.querySelector('.game-pipe');
 const cloudsDiv = document.querySelector('.clouds');
@@ -14,6 +15,7 @@ let quantitysCoins = 0;
 
 document.querySelector('#recordCoins').innerHTML = recordCoins;
 
+/* Função que faz com que o mario pule */
 const jump = () => {
     mario.classList.add('jump');
     setTimeout(() => {
@@ -21,29 +23,61 @@ const jump = () => {
     }, 500)
 }
 
+/* Função que verifica qual a tecla foi clicada */
 const verifyKey = () => {
     if (event.keyCode == 38) {
         jump();
     }
 }
 
+/* Função de inicio do jogo */
 const startFirstGame = () => {
+    /* Função que mostra a tela de Game Over */
     const reloadPageGameOver = () => {
         gameOver.style.display = 'flex';
         const verifyKeyReloadGameOver = () => { event.keyCode == 38 ? document.location.reload(false) : document.location.reload(false) }
         document.addEventListener('keydown', verifyKeyReloadGameOver);
     }
     
+    /* Função do jogo */
     const game = () => {
         const loop = setInterval(() => {
             const heightMario = +window.getComputedStyle(mario).bottom.replace('px','');
             const pipePosition = pipe.offsetLeft;
             const cloudsPosition = clouds.offsetLeft;
             const montainsPosition = montains.offsetLeft;
+            
+            /* Contador de coins */
             if (pipePosition <= 140 && heightMario > 105) {
                 quantitysCoins += 1;
                 document.querySelector('#quantitysCoins').innerHTML = quantitysCoins;
             }
+            
+            /* Aumentando a velocidade de acordo com a quantidade de coins */
+            switch (quantitysCoins) {
+                case 100:
+                    setTimeout(() => {
+                        pipe.style.animationDuration = '1.3s';
+                    }, 115);
+                    break;
+                case 200:
+                    setTimeout(() => {
+                        pipe.style.animationDuration = '1.1s';
+                    }, 400);
+                    break;
+                case 400:
+                    setTimeout(() => {
+                        pipe.style.animationDuration = '0.95s';
+                    }, 10);
+                    break;
+                case 800:
+                    setTimeout(() => {
+                        pipe.style.animationDuration = '0.8s';
+                    }, 300);
+                    break;
+            }
+            
+            /* Verificando se o jogador não bateu no pipe */
             if ((pipePosition <= 130) && (pipePosition > 0) && (heightMario < 100)) {
                 pipe.style.animation = 'none';
                 pipe.style.left = `${pipePosition}px`;
@@ -69,6 +103,7 @@ const startFirstGame = () => {
         }, 100);
     }
     
+    /* Iniciando o jogo */
     if (event.keyCode == 38) {
         mario.classList.remove('pause-initial-mario');
         pipe.classList.remove('pause-initial-pipe');
