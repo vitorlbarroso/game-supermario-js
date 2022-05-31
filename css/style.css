@@ -13,7 +13,7 @@ body{
 .game-screen{
     width: 100vw;
     height: 95vh;
-    border-bottom: 5vh solid rgb(34, 152, 2);
+    border-bottom: 5vh solid rgb(27, 166, 3);
     background-image: linear-gradient(#2297FF, #91F0FB);
     position: relative;
     overflow: hidden;
@@ -53,6 +53,44 @@ body{
     right: 70px;
     opacity: 0.8;
     animation: montains 30s infinite linear;
+}
+
+.press-start-game{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.press-reaload-game-over{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.pause-initial-mario {
+    animation: none;
+    left: 15%;
+}
+
+.pause-initial-pipe {
+    animation: none;
+    right: 15%;
+}
+
+.pause-initial-clouds img {
+    animation: none;
+    right: 50%;
+}
+
+.pause-initial-montains img {
+    animation: none;
+    right: 30%;
 }
 
 /* Animations */
