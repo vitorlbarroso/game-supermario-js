@@ -1,0 +1,105 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Styles */
+#background-screen{
+    background: #A1ADFF;
+}
+
+.game-screen{
+    width: 100vw;
+    height: 95vh;
+    border-bottom: 5vh solid rgb(34, 152, 2);
+    background-image: linear-gradient(#2297FF, #91F0FB);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-pipe{
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    right: 0px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.game-mario-running{
+    position: absolute;
+    width: 120px;
+    bottom: 0;
+    left: 50px;
+}
+
+.jump{
+    animation: mario-jump 600ms ease-out;
+}
+
+.clouds img{
+    position: absolute;
+    width: 600px;
+    right: -600px;
+    margin-top: 10px;
+    animation: clouds 20s infinite linear;
+}
+
+.montains img {
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    right: 70px;
+    opacity: 0.8;
+    animation: montains 30s infinite linear;
+}
+
+/* Animations */
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes mario-jump {
+    0% {
+        bottom: 0px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes clouds {
+    from {
+        right: -600px;
+        top: 10px;
+    }
+    
+    to {
+        right: 100%;
+        top: 70px;
+    }
+}
+
+@keyframes montains {
+    from {
+        right: -300px;
+        width: 250px;
+    }
+    
+    to {
+        right: 100%;
+        width: 330px;
+    }
+}
